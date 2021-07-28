@@ -1,7 +1,8 @@
+
 export default function RegisterPage() {
   return (
     <div>
-      RegisterPage
+      Register
     </div>
   )
 }

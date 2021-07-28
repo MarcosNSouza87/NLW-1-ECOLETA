@@ -8,7 +8,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
   body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto',"Segoe UI", sans-serif;
     -webkit-font-smoothing: antialiased;
     font-size: 1rem;
     background-color: ${(props) => props.theme.background};

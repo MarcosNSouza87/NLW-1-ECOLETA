@@ -1,40 +1,21 @@
 import styled from "styled-components";
 import logo from "../../assets/logo.svg";
 import enterImg from "../../assets/enter.svg";
-import IconSearch from "../../assets/search";
-
-import IconProfile from "../../assets/profile";
 import { Link } from "react-router-dom";
 
-type HeaderProps = {
-  title: string | undefined;
-  auth: boolean;
-};
 
-export default function Header(props: HeaderProps) {
+
+export default function Header() {
   return (
     <HeaderContainer>
       <Link to="/" className="lnk-btn">
         <img src={logo} alt="" />
       </Link>
-      {props.auth ? (
-        <>
-          <h1 className="title">{props.title}</h1>
-          <div className="menu">
-            <Link to="/search" className="lnk-btn app-btn">
-              <IconSearch color="" />
-            </Link>
-            <Link to="/profile" className="lnk-btn app-btn">
-              <IconProfile color="" />
-            </Link>
-          </div>
-        </>
-      ) : (
-        <Link to="/auth/login" className="lnk-btn info">
-          <img src={enterImg} alt="" />
-          <strong>Entrar</strong>
-        </Link>
-      )}
+
+      <Link to="/auth/login" className="lnk-btn info">
+        <img src={enterImg} alt="" />
+        <strong>Entrar</strong>
+      </Link>
     </HeaderContainer>
   );
 }
@@ -64,23 +45,7 @@ const HeaderContainer = styled.header`
     color: ${(props) => props.theme.background};
     background-color: ${(props) => props.theme.colors.info};
   }
-  .lnk-btn.app-btn {
-    display: flex;
-    justify-content: center;
-    width: 62px;
-    height: 62px;
-    background-color: ${(props) => props.theme.blocks};
-    transition: all 0.15s;
-    svg {
-      stroke: ${(props) => props.theme.textTitle};
-    }
-    :hover {
-      svg {
-        stroke: ${(props) => props.theme.colors.primary};
-      }
-      background-color: ${(props) => props.theme.colors.secundary};
-    }
-  }
+
 
   @media (max-width: 1250px) {
     .content {

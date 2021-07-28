@@ -5,6 +5,7 @@ import { ThemeProvider } from "styled-components";
 import GlobalStyle from './styles/global';
 import light from "./styles/theme/light";
 import App from "./App";
+import 'leaflet/dist/leaflet.css'
 
 ReactDOM.render(
   <React.StrictMode>

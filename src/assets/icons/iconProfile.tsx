@@ -4,7 +4,7 @@ type IconProps = {
   color:string;
 }
 
-export default function IconProfile({color}:IconProps) {
+export function IconProfile({color}:IconProps) {
   return (
     <svg
       width="35"

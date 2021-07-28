@@ -9,7 +9,7 @@ export default function LandingPage() {
   return (
     <LandingPageContainer>
       <div className="content">
-        <Header title="" auth={false} />
+        <Header/>
         <main>
           <div>
             <h1>Seu marketplace de coleta de resíduos.</h1>
@@ -18,7 +18,7 @@ export default function LandingPage() {
               eficiente.
             </p>
 
-            <Link to="/register" className="lnk-btn register">
+            <Link to="/auth/register" className="lnk-btn register">
               <img src={enterImg} alt="" />
               <strong>Cadastre um ponto de coleta</strong>
             </Link>
@@ -61,7 +61,7 @@ const LandingPageContainer = styled.div`
       .lnk-btn.register {
         img {
           background: ${(props) => props.theme.colors.green};
-          padding: 20px 20px;
+          padding: 20px 16px;
           height: 70px;
         }
         max-width: 360px;
